@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         TweetAppFragmentManager.getInstance().showFragment(this, previousFragment, R.id.fragment_container);
     }
 
-    public void shorOrHideActionBarBackButton(boolean showBackArrow) {
+    public void showOrHideActionBarBackButton(boolean showBackArrow) {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_title));

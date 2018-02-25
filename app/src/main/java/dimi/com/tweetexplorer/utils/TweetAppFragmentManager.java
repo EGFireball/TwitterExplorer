@@ -51,9 +51,9 @@ public class TweetAppFragmentManager {
         }
 
         if(fragment instanceof SearchTweetFragment) {
-            activity.shorOrHideActionBarBackButton(false);
+            activity.showOrHideActionBarBackButton(false);
         } else {
-            activity.shorOrHideActionBarBackButton(true);
+            activity.showOrHideActionBarBackButton(true);
         }
 
         currentFragment = fragment;
