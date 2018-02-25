@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer.ui.fragments;
+package dimi.com.tweetexplorer.core.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import dimi.com.tweetexplorer.R;
-import dimi.com.tweetexplorer.ui.activities.MainActivity;
-import dimi.com.tweetexplorer.ui.adapters.TweetsListAdapter;
-import dimi.com.tweetexplorer.ui.fragments.abstractions.TweetFragment;
+import dimi.com.tweetexplorer.core.activities.MainActivity;
+import dimi.com.tweetexplorer.core.adapters.TweetsListAdapter;
+import dimi.com.tweetexplorer.core.fragments.abstractions.TweetFragment;
 import twitter4j.Status;
 
 /**
