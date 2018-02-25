@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer.ui.fragments;
+package dimi.com.tweetexplorer.ui.fragments.abstractions;
 
 import android.support.v4.app.Fragment;
 

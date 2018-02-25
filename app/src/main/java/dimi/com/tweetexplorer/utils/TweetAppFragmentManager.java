@@ -1,11 +1,12 @@
-package dimi.com.tweetexplorer;
+package dimi.com.tweetexplorer.utils;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import dimi.com.tweetexplorer.ui.MainActivity;
+import dimi.com.tweetexplorer.R;
+import dimi.com.tweetexplorer.ui.activities.MainActivity;
 import dimi.com.tweetexplorer.ui.fragments.SearchTweetFragment;
-import dimi.com.tweetexplorer.ui.fragments.TweetFragment;
+import dimi.com.tweetexplorer.ui.fragments.abstractions.TweetFragment;
 
 /**
  * Created by User on 23.2.2018 г..

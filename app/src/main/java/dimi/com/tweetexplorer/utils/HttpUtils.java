@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer;
+package dimi.com.tweetexplorer.utils;
 
 /**
  * Created by User on 24.2.2018 г..

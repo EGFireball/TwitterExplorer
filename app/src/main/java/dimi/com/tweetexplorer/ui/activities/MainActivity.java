@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer.ui;
+package dimi.com.tweetexplorer.ui.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -8,8 +8,8 @@ import android.view.MenuItem;
 
 import dimi.com.tweetexplorer.R;
 import dimi.com.tweetexplorer.ui.fragments.SearchTweetFragment;
-import dimi.com.tweetexplorer.ui.fragments.TweetFragment;
-import dimi.com.tweetexplorer.TweetAppFragmentManager;
+import dimi.com.tweetexplorer.ui.fragments.abstractions.TweetFragment;
+import dimi.com.tweetexplorer.utils.TweetAppFragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 

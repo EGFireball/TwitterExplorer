@@ -15,7 +15,7 @@ import android.webkit.WebViewClient;
 
 import java.util.List;
 
-import dimi.com.tweetexplorer.HttpUtils;
+import dimi.com.tweetexplorer.utils.HttpUtils;
 import dimi.com.tweetexplorer.R;
 import twitter4j.Status;
 
