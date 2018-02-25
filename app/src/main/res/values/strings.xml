@@ -7,46 +7,45 @@
     <string android:name="com.twitter.sdk.android.ACCESS_TOKEN" name="twitter.AccessToken">1628562301-WSOoxPMrfbq4oQUDl9hWulbhzn8oDtUWqWutrAM</string>
     <string android:name="com.twitter.sdk.android.ACCESS_TOKEN_SECRET" name="twitter.AccessTokenSecret">9NCruGksb2vRcg9AmgbvxB3UBF08K9QLHZSppqDTkryCL</string>
 
-    <string name="search_label">Keyword:</string>
-    <string name="search_result_count_label">Number of results:</string>
-    <string name="search_retweets_label">Filter retweets:</string>
-    <string name="search_hint">Enter text here...</string>
+    <string name="search_result_count_label">Number of results</string>
+    <string name="search_for_hashTag_label">Search for hash tag</string>
+    <string name="search_retweets_label">Filter retweets</string>
+    <string name="search_hint">Keyword...</string>
     <string name="search_button_label">Search Tweets</string>
     <string name="empty_search_text">Please enter keyword!</string>
     <string name="no_internet_connection">You are not connected to Internet!</string>
     <string name="twitter_search_error">"Connection issue. Please try again!"</string>
     <string name="searching_dialog_title">Searching...</string>
-    <string name="loading_result_dialog_title">Loading. Please wait...</string>
+    <string name="loading_result_dialog_title">Loading tweet. Please wait...</string>
     <string name="tweet_source">Tweet Source:" "</string>
     <string name="tweet_list_fragment_title">Tweets for \'%s\'</string>
     <string name="empty_tweet_list_message">No results found</string>
 
     <string-array name="number_of_results">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
+        <item>" "1" "</item>
+        <item>" "2" "</item>
+        <item>" "3" "</item>
+        <item>" "4" "</item>
+        <item>" "5" "</item>
+        <item>" "6" "</item>
+        <item>" "7" "</item>
+        <item>" "8" "</item>
+        <item>" "9" "</item>
+        <item>10" "</item>
+        <item>11" "</item>
+        <item>12" "</item>
+        <item>13" "</item>
+        <item>14" "</item>
+        <item>15" "</item>
+        <item>16" "</item>
+        <item>17" "</item>
+        <item>18" "</item>
+        <item>19" "</item>
+        <item>20" "</item>
+        <item>21" "</item>
+        <item>22" "</item>
+        <item>23" "</item>
+        <item>24" "</item>
+        <item>25" "</item>
     </string-array>
-
 </resources>

@@ -42,6 +42,7 @@ public class SearchTweetFragment extends TweetFragment {
     private AutoCompleteTextView searchTv;
     private AppCompatButton searchBtn;
     private Spinner maximumResultsSpinner;
+    private ToggleButton hashTagTb;
     private ToggleButton filterRetweetTb;
 
     @Override
@@ -52,7 +53,7 @@ public class SearchTweetFragment extends TweetFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.search_tweet_fragment_new, container, false);
+        final View view = inflater.inflate(R.layout.search_tweet_fragment, container, false);
 
         searchTv = view.findViewById(R.id.search_textView);
         searchTv.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -74,6 +75,7 @@ public class SearchTweetFragment extends TweetFragment {
             }
         });
 
+        hashTagTb = view.findViewById(R.id.hashTagToggle);
         filterRetweetTb = view.findViewById(R.id.filterRetweetsToggle);
 
         maximumResultsSpinner = view.findViewById(R.id.results_number);
@@ -105,11 +107,7 @@ public class SearchTweetFragment extends TweetFragment {
 
         if(TweetApp.isAppConnectedToInternet(getContext())) {
             if(searchTv.getText() != null && !searchTv.getText().toString().equals("")) {
-                String searchPhrase = searchTv.getText().toString();
-                int maximumResults = Integer.valueOf(maximumResultsSpinner.getSelectedItem().toString());
-                boolean reTweetsFilterEnabled = filterRetweetTb.isChecked();
-                new GetTweetListAsync(searchPhrase, maximumResults, reTweetsFilterEnabled)
-                                        .executeOnExecutor(Executors.newSingleThreadExecutor());
+                searchForTweetsByKeyword();
             } else {
                 Toast.makeText(getContext(),
                         getResources().getString(R.string.empty_search_text), Toast.LENGTH_SHORT).show();
@@ -119,6 +117,15 @@ public class SearchTweetFragment extends TweetFragment {
             Toast.makeText(getContext(),
                     getResources().getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void searchForTweetsByKeyword() {
+        String searchPhrase = searchTv.getText().toString();
+        int maximumResults = Integer.valueOf(maximumResultsSpinner.getSelectedItem().toString().trim());
+        boolean searchForHashTag = hashTagTb.isChecked();
+        boolean reTweetsFilterEnabled = filterRetweetTb.isChecked();
+        new GetTweetListAsync(searchPhrase, maximumResults, searchForHashTag, reTweetsFilterEnabled)
+                                .executeOnExecutor(Executors.newSingleThreadExecutor());
     }
 
     private void hideSoftKeyboard(View view) {
@@ -133,11 +140,15 @@ public class SearchTweetFragment extends TweetFragment {
         private String searchPhrase;
         private int maximumResults;
         private ProgressDialog progressDialog;
+        private boolean searchForHashTag;
         private boolean reTweetsFilterEnabled;
 
-        public GetTweetListAsync(String searchPhrase, int maximumResults, boolean reTweetsFilterEnabled) {
+        public GetTweetListAsync(String searchPhrase, int maximumResults,
+                                 boolean searchForHashTag, boolean reTweetsFilterEnabled) {
+
             this.searchPhrase = searchPhrase;
             this.maximumResults = maximumResults;
+            this.searchForHashTag = searchForHashTag;
             this.reTweetsFilterEnabled = reTweetsFilterEnabled;
 
             progressDialog = new ProgressDialog(getActivity());
@@ -206,7 +217,12 @@ public class SearchTweetFragment extends TweetFragment {
         }
 
         private String generateQueryString() {
-            StringBuffer queryBuffer = new StringBuffer().append("#").append(searchPhrase);
+
+            StringBuffer queryBuffer = new StringBuffer();
+            if(searchForHashTag) {
+                queryBuffer.append("#");
+            }
+            queryBuffer.append(searchPhrase);
             if(reTweetsFilterEnabled) {
                 queryBuffer.append(FILTER_RETWEETS_QUERY_PARAM);
             }

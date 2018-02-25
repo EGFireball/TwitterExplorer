@@ -6,46 +6,46 @@
     <string android:name="com.twitter.sdk.android.CONSUMER_SECRET" name="twitter.SECRET">RuHh3TRWEyso1LnQ6Mju48yfaaTJa8j4zROwuFaj6quHOfPEyA</string>
     <string android:name="com.twitter.sdk.android.ACCESS_TOKEN" name="twitter.AccessToken">1628562301-WSOoxPMrfbq4oQUDl9hWulbhzn8oDtUWqWutrAM</string>
     <string android:name="com.twitter.sdk.android.ACCESS_TOKEN_SECRET" name="twitter.AccessTokenSecret">9NCruGksb2vRcg9AmgbvxB3UBF08K9QLHZSppqDTkryCL</string>
-
-    <string name="search_label">Въведете дума:</string>
-    <string name="search_result_count_label">Брой резултати:</string>
-    <string name="search_retweets_label">Филтрирай retweets:</string>
-    <string name="search_hint">Дума...</string>
+    
+    <string name="search_result_count_label">Брой резултати</string>
+    <string name="search_for_hashTag_label">Търси по HashTag</string>
+    <string name="search_retweets_label">Филтрирай retweets</string>
+    <string name="search_hint">Ключова Дума...</string>
     <string name="search_button_label">Търсене</string>
     <string name="empty_search_text">Моля, въведете текст!</string>
     <string name="no_internet_connection">Няма интернет връзка!</string>
     <string name="twitter_search_error">"Неочакван проблем. Моля, опитайте отново!"</string>
     <string name="searching_dialog_title">Търсене...</string>
-    <string name="loading_result_dialog_title">Зареждане. Моля изчакайте...</string>
+    <string name="loading_result_dialog_title">Зареждане на Tweet. Моля изчакайте...</string>
     <string name="tweet_source">Tweet от:" "</string>
     <string name="tweet_list_fragment_title">Намерени Tweets за \'%s\'</string>
     <string name="empty_tweet_list_message">Не бяха открити резултати</string>
 
     <string-array name="number_of_results">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
+        <item>" "1" "</item>
+        <item>" "2" "</item>
+        <item>" "3" "</item>
+        <item>" "4" "</item>
+        <item>" "5" "</item>
+        <item>" "6" "</item>
+        <item>" "7" "</item>
+        <item>" "8" "</item>
+        <item>" "9" "</item>
+        <item>10" "</item>
+        <item>11" "</item>
+        <item>12" "</item>
+        <item>13" "</item>
+        <item>14" "</item>
+        <item>15" "</item>
+        <item>16" "</item>
+        <item>17" "</item>
+        <item>18" "</item>
+        <item>19" "</item>
+        <item>20" "</item>
+        <item>21" "</item>
+        <item>22" "</item>
+        <item>23" "</item>
+        <item>24" "</item>
+        <item>25" "</item>
     </string-array>
 </resources>
