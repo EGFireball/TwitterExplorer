@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer.ui.fragments;
+package dimi.com.tweetexplorer.core.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -25,8 +25,8 @@ import java.util.concurrent.Executors;
 import dimi.com.tweetexplorer.R;
 import dimi.com.tweetexplorer.TweetApp;
 import dimi.com.tweetexplorer.utils.TweetAppFragmentManager;
-import dimi.com.tweetexplorer.ui.activities.MainActivity;
-import dimi.com.tweetexplorer.ui.fragments.abstractions.TweetFragment;
+import dimi.com.tweetexplorer.core.activities.MainActivity;
+import dimi.com.tweetexplorer.core.fragments.abstractions.TweetFragment;
 import twitter4j.Query;
 import twitter4j.QueryResult;
 

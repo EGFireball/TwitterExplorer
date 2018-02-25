@@ -1,4 +1,4 @@
-package dimi.com.tweetexplorer.ui.adapters;
+package dimi.com.tweetexplorer.core.adapters;
 
 import android.app.ProgressDialog;
 import android.content.Context;

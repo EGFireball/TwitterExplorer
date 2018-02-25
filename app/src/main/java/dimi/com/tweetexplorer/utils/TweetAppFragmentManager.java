@@ -4,9 +4,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import dimi.com.tweetexplorer.R;
-import dimi.com.tweetexplorer.ui.activities.MainActivity;
-import dimi.com.tweetexplorer.ui.fragments.SearchTweetFragment;
-import dimi.com.tweetexplorer.ui.fragments.abstractions.TweetFragment;
+import dimi.com.tweetexplorer.core.activities.MainActivity;
+import dimi.com.tweetexplorer.core.fragments.SearchTweetFragment;
+import dimi.com.tweetexplorer.core.fragments.abstractions.TweetFragment;
 
 /**
  * Created by User on 23.2.2018 г..
