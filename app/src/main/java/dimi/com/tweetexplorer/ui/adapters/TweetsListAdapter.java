@@ -27,14 +27,14 @@ public class TweetsListAdapter extends RecyclerView.Adapter<TweetsListAdapter.Vi
 
     private Context context;
     private List<Status> tweetsList;
-//    private ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
 
     public TweetsListAdapter(Context context, List<Status> tweetsList) {
         this.context = context;
         this.tweetsList = tweetsList;
-//        progressDialog = new ProgressDialog(context);
-//        progressDialog.setTitle(context.getResources().getString(R.string.loading_result_dialog_title));
-//        progressDialog.setCancelable(false);
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle(context.getResources().getString(R.string.loading_result_dialog_title));
+        progressDialog.setCancelable(true);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class TweetsListAdapter extends RecyclerView.Adapter<TweetsListAdapter.Vi
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-//                progressDialog.show();
+                progressDialog.show();
             }
 
             @Override
@@ -67,9 +67,11 @@ public class TweetsListAdapter extends RecyclerView.Adapter<TweetsListAdapter.Vi
                 view.loadUrl(url);
                 return true;
             }
+
             @Override
-            public void onPageFinished(WebView view, final String url) {
-//                progressDialog.dismiss();
+            public void onPageFinished(WebView view, String url) {
+                progressDialog.dismiss();
+                super.onPageFinished(view, url);
             }
 
             @Override
